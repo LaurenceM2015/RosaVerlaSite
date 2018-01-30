@@ -33,18 +33,11 @@
     <body>
 
 
-    <header class="main-header">
-
-        <nav class="navbar navbar-static-top">
-
-            <div class="navbar-top">
-              
-
-              <div class="container">
-                 
-                  <div class="row">
+    <header class="main-header container-fluid">
+        <div class="navbar-top banner" role="banner">
+             	<div class="row">
                     <div class="top-banner">
-                    	<!--<address class="header-contact text-left"></address> -->
+                    	
                     	<figure class="brand hidden-xs">
                     		<img src="assets/images/RosaVerlaLogo.png" alt="Rosa Verla  Logo">
                     	</figure>
@@ -53,67 +46,55 @@
                     		<figure class="profil">
                     			<img src="assets/images/RVprofil.jpg" class="RVprofil" alt="Rosa Verla Profil Image">
                     		</figure>
-                    	<div class="btn-donate">
-                    		<a href="#" class="btn btn-lg btn-secondary bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                    		
+                    	
+                    		
+                    		<figure class="rvfundation hidden-xs">
+                    			<img src="assets/images/RVFundation.JPG" class="rv-fundation" alt="Rosa Verla Fundation">
+                    			
+                    		</figure>
+                    		
+                    		<div id="btn-donate" class="btn-donate" >
+                    		<a href="#" class="btn btn-lg btn-secondary bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE</a>
                     	</div>
+                    	 
                     	
                     </div>
-
-                    
-
-
                   </div>
-              </div>
-
             </div>
 
-            <div class="navbar-main">
-              
-              <div class="container">
+    <nav id="navbar" class="navbar-main navbar ">
+			  
+		
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="assets/images/RosaVerlaLogo.png" alt="Rosa Verla Branding">Brand</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+			   <li><a class="is-active" href="index.html">HOME</a></li>
+			   <li><a href="#about">ABOUT</a></li>
+			   <li><a href="#news">NEWS</a></li>
+			   <li><a href="#rv-foundation">RV Foundation</a></li>
+			   <li class="has-child"><a href="#">RV C.I.C</a></li>
+			   <li><a href="#contact">CONTACT</a></li>
+			  </ul>
 
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-
-                  </button>
-                  
-                  <a class="navbar-brand" href="index.html"><img src="assets/images/RosaVerlaLogo.png" alt="Rosa Verla Branding"></a>
-                  
-                </div>
-
-                <div id="navbar" class="navbar-collapse collapse pull-right">
-
-                  <ul class="nav navbar-nav">
-
-                    <li><a class="is-active" href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="#">RV Foundation</a></li>
-                     
-                    <li class="has-child"><a href="#">RV C.I.C</a></li>
-                    
-                    <li><a href="contact.html">CONTACT</a></li>
-
-                  </ul>
-
-                </div> <!-- /#navbar -->
-
-              </div> <!-- /.container -->
-              
-            </div> <!-- /.navbar-main -->
+			</div>
+		  
+    </nav> <!-- /.navbar-main -->
 
 
-        </nav> 
+       
 
     </header> <!-- /. main-header -->
 
 
-
+	<main id="main-content">
 
     <!-- Carousel
     ================================================== -->
@@ -305,9 +286,9 @@
       
     </section> <!-- /.about-us -->
 
-    <section id="news" class=" home-news">
+    <section id="news" class="home-news">
 
-        <div class="container">
+        
             
              <div class="row">
                 
@@ -319,10 +300,7 @@
              </div>
 
             <div class="news-boxs">
-                
-               
-
-                    <div class="news-col animate-onscroll fadeIn">
+            	<div class="news-col animate-onscroll fadeIn">
 
                         <img src="assets/images/reasons/RVcic.jpg" alt="Rosa Verla Foundraising">
 
@@ -339,9 +317,7 @@
                                 
                         </div>
                     </div>
-                    
-
-                    <div class="news-col animate-onscroll fadeIn">
+                <div class="news-col animate-onscroll fadeIn">
 
                         <img src="assets/images/reasons/EndMH1.jpg" alt="End Mental Health">
 
@@ -358,22 +334,62 @@
 
                         </div>
                     </div>
-                    
-               
-
 
             </div>
           
   
 
-        </div>
+        
       
 
-    </section> <!-- /.home-reasons -->
+    </section> <!-- /.news -->
+    
+    <section id="rv-foundation">
+    	<div class="foundation-boxs">
+    	<div class="found-box">
+    		<figure class="WEgroups">
+    			<img src="assets/images/RVfundation/img1.JPG" alt="Rosa Verla Women Groups">
+    		</figure>
+    		<h3>RV WOMEN EMPOWEREMENT GROUPS</h3>
+    		<div class="found-feature">
+    			<p>Rosa Verla Women Empowerment group is centred around bringing women together in the community these women groups work</p>
+    			<ol class="rvGroup">
+					<li>Kikaikelaki waiyngolum</li>
+					<li>Kikaikelaki Tsenla</li>
+					<li>K4 central</li>
+					<li>Kai Takui</li>
+				    <li>Kshiy Kiyan</li>
+				</ol>
+    			
+    		</div>
+    		</div>
+    	<div class="found-box">
+    		<figure class="RV-MHproject">
+    			<img src="assets/images/RVfundation/causehealth.jpg" alt="Rosa Verla Mental Health Projects">
+    		</figure>
+    		
+    		<h3>MENTAL HEALTH POJECTS</h3>
+    		<div class="found-feature">
+    			
+    		</div>
+    			
+    	</div>
+    	<div class="found-box">
+    		<figure class="RV-librairy">
+    			<img src="assets/images/RVfundation/KumboLibriary2.jpg" alt="Rosa Verla Kumboli Library">
+    		</figure>
+    		<h3>RV FOUNDATION LIBRAIRY</h3>
+    		<div class="found-feature">
+    			
+    		</div>
+    	</div>
+    	</div>
+    	
+    </section>
 
 
-
-    <footer class="main-footer">
+</main><!-- MAIN CONTENT -->
+    <footer id="contact" class="main-footer">
 
       <!--  <div class="footer-top "> </div>-->
           

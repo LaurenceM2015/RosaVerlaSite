@@ -206,95 +206,117 @@ section{
 /* Header 
 ================================= */
 
-.navbar-static-top {
 
-	margin: 0;
-	border:0;
-	color:#fff;
-
-
-
-}
-.navbar-top {
-	background-color: #000000;
-	@include background-image(linear-gradient(160deg #0A0D0D,  #002503 25%, #0B080B 50%, #000223 125%));
+.main-header{
+	 background-color: #000000;
 	
-	  
+	.navbar-top {
+		@include background-image(linear-gradient(160deg #0A0D0D,  #002503 25%, #0B080B 50%, #000223 125%));
 	
-	font-size: 12px;
-	padding: 3px 0;
+		font-size: 12px;
+		padding: 3px 0;
 
-	.list-inline {margin-bottom: 0;}
-	
+		.list-inline {margin-bottom: 0;}
 
-	.header-contact {
 
-		li {
-			margin-right: 15px;
+		.header-contact {
 
-			.fa {
-				margin-right: 5px;
+			li {
+				margin-right: 15px;
+
+				.fa {
+					margin-right: 5px;
+				}
+
+			}
+		}
+
+		.top-banner{
+			display: flex;
+			padding: 0.750em;
+			
+			
+			@media (max-width: 480px){margin: 0 0.750em; }
+			
+			figure{
+				img{height: 150px !important;}
+			}
+
+			@media (min-width: 768px){
+				height: 9em;
 			}
 			
+			#btn-donate{
+				@media (min-width: 768px){display: none !important;}
+				
+			}
+
+			 .btn-donate{
+				 @media (min-width: 320px){
+				 	display: flex !important;
+					justify-content: center;
+					flex-direction: column;
+					flex: 1;
+					text-align: right;
+				}
+
+			}
+
+			figure.brand{
+				height: 10em;
+				flex: 1;
+				text-align: left;
+				line-height: 1.5;
+
+				@media (min-width: 768px){flex: 1;}
+			}
+			.profil {
+				text-align: center;
+				height: 9em;
+				flex: 2;
+				@media (max-width: 480px){
+					text-align: left !important;
+				}
+				
+
+				@media (min-width: 768px){flex: 3;}
+
+				img.RVprofil{
+					height: 9em !important;
+					border-radius: 50%;
+
+						@media (min-width: 768px){
+							/*height: 13em !important; */
+								text-align: center;
+						}
+				}
+			}
 		}
-	}
 	
-	.top-banner{
-		display: flex;
-		padding: 0.750em;
+	} /* navbar-top */
+
+
+	.navbar-main {
+		
+		margin-bottom: 0;
+		color: #fff;
 		
 		
-		
-		 .btn-donate{
+		@media (min-width: 768px){
 			display: flex;
 			justify-content: center;
-			flex-direction: column;
-			flex: 1;
 			
 		}
-		
-		figure.brand{
-			height: 10em;
-			flex: 1;
-			text-align: left;
-			line-height: 1.5;
-			
-			
-		}
-		
-		
-		
-		.profil {
-			text-align: center;
-			height: 9em;
-			flex: 2;
-			
-			.RVprofil{
-				height: 9em;
-				border-radius: 50%;
-				}
-		}
-	}
-	
-	
-}
 
+		.navbar-brand {
+			display: block;
+			 border-bottom: none !important;
+			padding: 0;
 
-.navbar-main {
-	
-	margin-bottom: 0;
-	color: #fff;
-	
-	background-color: #000;
-	
-	
-
-
-
-	.navbar-brand {
-		display: block;
-		 border-bottom: none !important;
-		padding: 0;
+			@media (min-width: 768px){
+				height: 70px;
+				display: none;
+			}
 		
 		img{
 			height: 100%;
@@ -362,6 +384,12 @@ section{
 		 	padding: 20px 15px ;
 		 	border-bottom: 2px solid transparent ;
 			text-transform: uppercase;
+			 
+			@media (max-width: 768px){ 
+				font-size: 0.600em; 
+				padding: 20px 10px ;
+			 }
+
 
 
 
@@ -379,15 +407,44 @@ section{
 
 
 	 }
-
+	
+		.navbar-toggle{
+			background: $color_main;
+			border-radius: 0;
+			margin-right: 0;
+			
+			
+		}
 
 	 .icon-bar {
 
 	 	background:	#fff;
 
 	 }
+	
+		
 
 
+}
+	
+	
+	
+
+
+		
+	
+	
+	
+	
+	@media (min-width: 768px){
+		
+		
+
+		.header-contact {text-align: left;}
+
+	}
+	
+	
 }
 
 /* Home Slider 
@@ -399,10 +456,12 @@ section{
 			width: 100%;
 			height: 15.000em !important; 
 			
-			@media (max-width: 768px){
-				    height: 20em !important;
+			@media (min-width: 768px){
+				   /* height: 20em !important;*/
+					height: 100% !important;
 				
 			}
+			
 		}
 	}
 	
@@ -428,6 +487,23 @@ section{
 		  &:hover {
 		  	width: 50px;
 		  }
+		
+		@media (min-width: 768px){
+				background: $color_main;
+				  height: 40px;
+				  width: 20px;
+
+				  top: 50%;
+				  margin-top: -20px;
+
+
+				  .fa {
+
+					  font-size: 1.5em;
+					  padding-top: 4px;
+				  }
+			
+		}
 
 	}
 
@@ -437,13 +513,19 @@ section{
 		transform : translateY(-50%);
 	}
 
-	.carousel-title	{
+	h2.carousel-title	{
 
 		color: #fff;
 		font-family: $font_titles;
 		font-size: 0.800em;
 		font-weight: bold;
 		text-transform: uppercase;
+		
+		@media (min-width: 768px){
+			font-size: 2.000em !important;
+			border-bottom: none;
+			
+		}
 
 	}
 
@@ -451,28 +533,30 @@ section{
 
 		font-size: 0.700em;
 		text-transform: uppercase;
+		
+		@media (min-width: 768px){font-size: 0.800em;}
 
 	}
 
 	.btn{
-
-			margin-top: 30px ;
+		margin-top: 1.500em ;
+		margin-bottom: 1.500em;
 	}
+	
+	/*.carousel-control {} */
 
 } 
 
-.section-service {
+
+
+
+/* Servces section 
+================================= */
+
+#services {
+	
 	margin: 30px 0;
 }
-
-#about-us{
-	background: $color_main;
-	color: #fff;
-}
-
-
-/* Header 
-================================= */
 
 .serv-box{
 	display: flex;
@@ -484,14 +568,16 @@ section{
 	}
 }
 
-
-/* home/
-================================= */
-
-#services {
-	
+.section-service {
 	margin: 30px 0;
 }
+
+#about-us{
+	background: $color_main;
+	color: #fff;
+}
+
+
 
 .service-box{
 	
@@ -506,8 +592,6 @@ section{
 	@include background-image(linear-gradient(160deg, $color_main -25%, $color_secondary 50%, $color_main 125%));
 	color: #fff;
 	
-	
-
 
 	.col-icon-wrapper {
 		min-height: 80px;
@@ -529,13 +613,15 @@ section{
 }
 
 
-/* home/reasons 
+/* Blog News 
 ================================= */
 
 .home-news {
 	margin: 25px 0; 
 
 	.news-boxs{
+		width: 95%;
+			margin: 0 auto; 
 		
 		.news-col {
 
@@ -551,7 +637,6 @@ section{
 			}
 
 			.news-titles {
-
 				position: absolute;
 				bottom: 0;
 				text-align: center;
@@ -609,14 +694,46 @@ section{
 		@media (min-width: 768px){
 			display: flex;
 			justify-content: space-between;
+			
 		}
 	}
 	
 }
 
 
-/* home/causes
+/* ROSA VERLA FUNDATION
 ================================= */
+
+#rv-foundation{
+	background: #f4f4f4;
+	.foundation-boxs{
+		width: 95%;
+    	margin: 0 auto;
+		
+		@media (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		
+		.found-box{
+			background: #fff;
+			margin-bottom: 1.000em;
+			flex-basis: 32%;
+			@media (min-width: 768px){
+				width: 100%;
+			}
+			
+			
+				figure{
+					img{width: 100%;}
+				}
+
+		}
+		
+	}
+	
+}
 
 
 /* Team 
@@ -678,7 +795,13 @@ section{
 		.header-social{
 			text-align: center;
 		}
+		
+		@media (min-width: 768px){
+			text-align: right;
+			
+		}
 	}
+	
 
 
 	.footer-main {
@@ -706,9 +829,6 @@ section{
 		}
 		
 	}
-
-
-	 
 
 	.footer-title {
 
@@ -1252,120 +1372,15 @@ form {
 
 /* Small devices (tablets, 768px and Down) */
 @media (min-width: 768px) {
-	.main-header{
-			
-			.navbar-static-top{
-				.navbar-top {
-					.top-banner{
-						height: 9em;
-						
-						figure.brand{
-							flex: 1;
-							
-						}
-
-						.profil{
-							
-							
-							flex: 3;
-							img.RVprofil{
-								
-								/*height: 13em !important; */
-								text-align: center;
-							
-							}
-							
-						}
-
-						.btn-donate{
-							flex: 1;
-							text-align: right;
-							
-						}
-
-						.header-contact {text-align: left;}
-					}
-					
-				}
-				
-				.navbar-main{
-					.navbar-header{
-						.navbar-brand{
-							height: 70px;
-							display: none;
-						}
-					}
-				
-				}
-			}
-	}
+	
 
 	
-	.carousel-home {
-		
-		/* Indicators */
-		.carousel-inner{
-			.item{
-				
-				
-				img{
-				height: 100%;
-					
-				}
-			}
-			
-		}
-
-		h2.carousel-title {
-
-			font-size: 2.000em;
-			border-bottom: none;
-			
-	
-	}
-	
-		.carousel-subtitle {
-
-			font-size: 0.800em;
-		}
-
-		.carousel-control {
-
-			  background: $color_main;
-			  height: 40px;
-			  width: 20px;
-		
-			  top: 50%;
-			  margin-top: -20px;
-
-
-			  .fa {
-
-			  	  font-size: 1.5em;
-	  			  padding-top: 4px;
-			  }
-
-		}
-
-		
-
-	}
 	
 	
 /* Footer */
 	
 
-	.main-footer{
-		.navbar-bottom {
-			.header-social{
-				text-align: right;
-			}
-
-		}
-				
-			
-			
-	}
+	
 	
 	/* SERVICES BOX */
 	
